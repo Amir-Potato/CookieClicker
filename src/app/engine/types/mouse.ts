@@ -1,0 +1,47 @@
+export enum MouseButtons {
+  NONE = 0,
+  LEFT = 1,
+  RIGHT = 2,
+  LEFT_RIGHT = 3,
+  MIDDLE = 4,
+  LEFT_MIDDLE = 5,
+  RIGHT_MIDDLE = 6,
+  LEFT_RIGHT_MIDDLE = 7,
+  BACK = 8,
+  LEFT_BACK = 9,
+  RIGHT_BACK = 10,
+  LEFT_RIGHT_BACK = 11,
+  MIDDLE_BACK = 12,
+  LEFT_MIDDLE_BACK = 13,
+  RIGHT_MIDDLE_BACK = 14,
+  LEFT_RIGHT_MIDDLE_BACK = 15,
+  FORWARD = 16,
+  LEFT_FORWARD = 17,
+  RIGHT_FORWARD = 18,
+  LEFT_RIGHT_FORWARD = 19,
+  MIDDLE_FORWARD = 20,
+  LEFT_MIDDLE_FORWARD = 21,
+  RIGHT_MIDDLE_FORWARD = 22,
+  LEFT_RIGHT_MIDDLE_FORWARD = 23,
+  BACK_FORWARD = 24,
+  LEFT_BACK_FORWARD = 25,
+  RIGHT_BACK_FORWARD = 26,
+  LEFT_RIGHT_BACK_FORWARD = 27,
+  MIDDLE_BACK_FORWARD = 28,
+  LEFT_MIDDLE_BACK_FORWARD = 29,
+  RIGHT_MIDDLE_BACK_FORWARD = 30,
+  LEFT_RIGHT_MIDDLE_BACK_FORWARD = 31,
+}
+
+export interface Mouse {
+  x: number;
+  y: number;
+  dx: number;
+  dy: number;
+
+  button: MouseButtons;
+  alt: boolean;
+  shift: boolean;
+  ctrl: boolean;
+  command: boolean;
+}

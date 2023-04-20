@@ -1,0 +1,24 @@
+h1 {
+    color: var(--Tertiary);
+    font-family: var(--TitleFont);
+    font-size: 250%;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    background-color: var(--Primary);
+}
+li {
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background-color: var(--Secondary);
+    border-color: var(--Accent);
+    border-width: 2px;
+    border-style: solid;
+    font-size: 100%;
+    font-family: var(--MainFont);
+    color: var(--Tertiary);
+}
