@@ -1,4 +1,4 @@
-import { Injectable, Renderer2, inject } from '@angular/core';
+import { Injectable, Renderer2, RendererFactory2, inject } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Mouse, MouseButtons } from './types/mouse';
 import { WindowData } from './types/window';
@@ -7,14 +7,13 @@ import { WindowData } from './types/window';
   providedIn: 'root',
 })
 export class WindowService {
-  readonly renderer = inject(Renderer2);
+  readonly rendererFactory = inject(RendererFactory2);
+  readonly renderer: Renderer2 = this.rendererFactory.createRenderer(
+    null,
+    null
+  );
 
-  window$ = new Observable<Window>((ob) => {
-    this.renderer.listen('window', 'load', (win) => {
-      ob.next(win.currentTarget as Window);
-      ob.complete();
-    });
-  });
+  window$: Observable<Window>;
 
   mouseData$ = new BehaviorSubject<Mouse>({
     x: 0,
@@ -34,6 +33,13 @@ export class WindowService {
   });
 
   constructor() {
+    this.window$ = new Observable<Window>((ob) => {
+      this.renderer.listen('window', 'load', (win) => {
+        ob.next(win.currentTarget as Window);
+        ob.complete();
+      });
+    });
+
     this.window$.subscribe((win) => {
       win.addEventListener('mousemove', (ev) => {
         this.updateMouse(ev);
