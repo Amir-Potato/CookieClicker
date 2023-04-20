@@ -1,6 +1,9 @@
 import { Producer } from './producer';
 
-type TempSave = 
+type TempSave = Pick<
+  Save,
+  'lastLogin' | 'currentLogin' | 'cookies' | 'producers'
+>;
 export class Save {
   id: number;
   lastLogin: Date;
@@ -11,11 +14,17 @@ export class Save {
 
   constructor(id: number, data: string) {
     this.id = id;
-    this.deserialize(data);
+
+    const temp: TempSave = JSON.parse(data);
+
+    this.lastLogin = temp.lastLogin;
+    this.currentLogin = temp.currentLogin;
+    this.cookies = temp.cookies;
+    this.producers = temp.producers;
   }
 
   serialize(): string {
-    const temp = {
+    const temp: TempSave = {
       lastLogin: this.lastLogin,
       currentLogin: this.currentLogin,
       cookies: this.cookies,
@@ -26,8 +35,11 @@ export class Save {
   }
 
   deserialize(data: string) {
-    const temp = JSON.parse(data);
+    const temp: TempSave = JSON.parse(data);
 
-
+    this.lastLogin = temp.lastLogin;
+    this.currentLogin = temp.currentLogin;
+    this.cookies = temp.cookies;
+    this.producers = temp.producers;
   }
 }
