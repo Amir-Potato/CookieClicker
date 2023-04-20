@@ -1,5 +1,6 @@
 import { Producer } from './producer';
 
+type TempSave = 
 export class Save {
   id: number;
   lastLogin: Date;
@@ -13,7 +14,20 @@ export class Save {
     this.deserialize(data);
   }
 
-  serialize(): string {}
+  serialize(): string {
+    const temp = {
+      lastLogin: this.lastLogin,
+      currentLogin: this.currentLogin,
+      cookies: this.cookies,
+      producers: this.producers,
+    };
 
-  deserialize(data: string) {}
+    return JSON.stringify(temp);
+  }
+
+  deserialize(data: string) {
+    const temp = JSON.parse(data);
+
+
+  }
 }
