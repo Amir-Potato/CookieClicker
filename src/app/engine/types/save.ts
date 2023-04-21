@@ -12,15 +12,22 @@ export class Save {
   cookies: number;
   producers: Producer[];
 
-  constructor(id: number, data: string) {
+  constructor(id: number, data?: string) {
     this.id = id;
 
-    const temp: TempSave = JSON.parse(data);
+    if (data) {
+      const temp: TempSave = JSON.parse(data);
 
-    this.lastLogin = temp.lastLogin;
-    this.currentLogin = temp.currentLogin;
-    this.cookies = temp.cookies;
-    this.producers = temp.producers;
+      this.lastLogin = temp.lastLogin;
+      this.currentLogin = temp.currentLogin;
+      this.cookies = temp.cookies;
+      this.producers = temp.producers;
+    } else {
+      this.lastLogin = new Date();
+      this.currentLogin = new Date();
+      this.cookies = 0;
+      this.producers = [];
+    }
   }
 
   serialize(): string {
