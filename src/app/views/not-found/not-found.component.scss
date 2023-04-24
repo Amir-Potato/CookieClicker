@@ -1,0 +1,50 @@
+:notfound-root {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--Primary), var(--Secondary));
+  }
+  .not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--Primary) 0%, var(--Secondary) 100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.title {
+  font-family: var(--TitleFont);
+  color: var(--Accent);
+  margin-bottom: 10px;
+  font-size: 400%;
+  margin: auto;
+}
+
+.crumbs-image {
+  width: 100vh;
+  height: auto;
+  margin-top: 1rem;
+}
+.cookie-monster-image {
+  position: absolute;
+  max-width: 200px;
+  bottom: 0;
+  left: 0;
+  height: auto;
+
+
+}
+.not-found-text {
+  background-color: var(--Secondary);
+  border-radius: 2rem;
+  padding: 2rem;
+  margin-top: 4rem;
+  padding-top: 0;
+  border-color: var(--Tertiary);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
