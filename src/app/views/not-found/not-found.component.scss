@@ -1,18 +1,10 @@
-:notfound-root {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to bottom, var(--Primary), var(--Secondary));
-  }
   .not-found-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, var(--Primary) 0%, var(--Secondary) 100%);
+  background: var(--Background-Gradient);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
 }
@@ -29,6 +21,7 @@
   width: 100vh;
   height: auto;
   margin-top: 1rem;
+  image-rendering: pixelated;
 }
 .cookie-monster-image {
   position: absolute;
