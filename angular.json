@@ -97,60 +97,6 @@
             ],
             "scripts": []
           }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/CookieClicker/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "inlineStyleLanguage": "scss"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media"
-            },
-            "development": {
-              "optimization": false,
-              "sourceMap": true,
-              "extractLicenses": false,
-              "vendorChunk": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "CookieClicker:build:development",
-              "serverTarget": "CookieClicker:server:development"
-            },
-            "production": {
-              "browserTarget": "CookieClicker:build:production",
-              "serverTarget": "CookieClicker:server:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "routes": [
-              "/"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "CookieClicker:build:production",
-              "serverTarget": "CookieClicker:server:production"
-            },
-            "development": {
-              "browserTarget": "CookieClicker:build:development",
-              "serverTarget": "CookieClicker:server:development"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }
