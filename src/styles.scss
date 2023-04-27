@@ -16,3 +16,11 @@ html, body {
     padding: 0;
     width: 100%;
 }
+
+@function size($s: 1) {
+  @return 1em * $s;
+}
+
+@function f-size($s: 1) {
+  @return 1rem * $s;
+}
