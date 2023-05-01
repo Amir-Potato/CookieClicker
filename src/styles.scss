@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
-    --Primary: #1C0A00;
-    --Secondary: #361500;
-    --Tertiary: #603601;
-    --Accent: #CC9544;
-    --TitleFont: 'Tilt Prism', cursive;
-    --MainFont: 'Poppins', sans-serif;
-    --Background-Gradient: linear-gradient(135deg, var(--Primary) 0%, var(--Secondary) 100%);
+  --Primary: #1c0a00;
+  --Secondary: #361500;
+  --Tertiary: #603601;
+  --Accent: #cc9544;
+  --TitleFont: "Tilt Prism", cursive;
+  --MainFont: "Poppins", sans-serif;
+  --Background-Gradient: linear-gradient(
+    135deg,
+    var(--Primary) 0%,
+    var(--Secondary) 100%
+  );
 }
-html, body {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
