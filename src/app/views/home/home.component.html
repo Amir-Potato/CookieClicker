@@ -1,13 +1,14 @@
 <div class="Home-container">
     <div class="Main-Menu">
         <div class="menu-tile">
-            <button *ngIf="submenuActive" (click)="closeSubmenu()">Back</button>
+            <button *ngIf="submenuActive" (click)="closeSubmenu()" class="back-button">Back</button>
+            <CreditsComponent> *ngIf="subCredits" class="button-list"></CreditsComponent>
             <div *ngIf="submenuActive == false" class="button-list">
-            <h1>Welcome to Cookie Clicker</h1>
-            <button (click)="newGame()">New Game</button>
-            <button (click)="loadGame()">Load Game</button>
-            <button (click)="loadOptions()">Options</button>
-            <button (click)="loadCredits()">Credits</button> 
+                <h1>Welcome to Cookie Clicker</h1>
+                <button (click)="newGame()">New Game</button>
+                <button (click)="loadGame()">Load Game</button>
+                <button (click)="loadOptions()">Options</button>
+                <button (click)="loadCredits()">Credits</button> 
         </div>
         </div> 
     </div>

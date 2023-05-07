@@ -57,3 +57,22 @@
     background-color: var(--Accent);
     color: var(--Secondary);
   }
+//background button to be a small back arrow in the corner
+  .back-button {
+    background-color: var(--Tertiary);
+    border-radius: 2em;
+    padding: 0.5em;
+    margin-top: 1em;
+    border-color: var(--Tertiary);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: var(--MainFont);
+    font-size: 1.5rem;
+    width: 5em;
+    padding: auto;
+    text-align: center;
+    color: var(--Accent);
+    margin-bottom: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

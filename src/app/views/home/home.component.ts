@@ -1,7 +1,7 @@
 import { Component, OnDestroy, inject } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { WindowService } from 'src/app/engine/window.service';
-
+import { app-credits } from src/app/credits/credits.component;
 
 
 @Component({
@@ -13,6 +13,8 @@ export class HomeComponent implements OnDestroy {
 
   windowService = inject(WindowService);
   submenuActive:boolean = false;
+  subCredits:boolean = false;
+  subOptions:boolean = false;
 
   
   windowSubscription: Subscription;
@@ -37,16 +39,20 @@ export class HomeComponent implements OnDestroy {
   loadOptions() {
     console.log('load options');
     this.submenuActive = true;
+    this.subOptions = true; 
   }
 
 
   loadCredits() {
     console.log('load credits');
     this.submenuActive = true;
+    this.subCredits = true;
   }
 
   closeSubmenu() {
     this.submenuActive = false;
+    this.subCredits = false;
+    this.subOptions = false;
   }
   
   ngOnDestroy(): void {
