@@ -12,7 +12,8 @@ import { WindowService } from 'src/app/engine/window.service';
 export class HomeComponent implements OnDestroy {
 
   windowService = inject(WindowService);
-  isTrue:boolean = false;
+  submenuActive:boolean = false;
+
   
   windowSubscription: Subscription;
 
@@ -24,7 +25,6 @@ export class HomeComponent implements OnDestroy {
 
   newGame() {
     console.log('new game');
-    this.isTrue = !this.isTrue;
   }
 
 
@@ -36,13 +36,17 @@ export class HomeComponent implements OnDestroy {
 
   loadOptions() {
     console.log('load options');
-
+    this.submenuActive = true;
   }
 
 
   loadCredits() {
     console.log('load credits');
+    this.submenuActive = true;
+  }
 
+  closeSubmenu() {
+    this.submenuActive = false;
   }
   
   ngOnDestroy(): void {
