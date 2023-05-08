@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotFoundComponent } from './not-found.component';
+import { BackButtonComponent } from './back-button.component';
 
-describe('NotFoundComponent', () => {
-  let component: NotFoundComponent;
-  let fixture: ComponentFixture<NotFoundComponent>;
+describe('BackButtonComponent', () => {
+  let component: BackButtonComponent;
+  let fixture: ComponentFixture<BackButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [NotFoundComponent]
+    imports: [BackButtonComponent]
 })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NotFoundComponent);
+    fixture = TestBed.createComponent(BackButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

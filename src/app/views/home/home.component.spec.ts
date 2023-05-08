@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
@@ -8,8 +7,8 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
-    })
+    imports: [HomeComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(HomeComponent);
@@ -20,4 +19,7 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+
 });

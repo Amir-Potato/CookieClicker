@@ -1,11 +1,13 @@
 <div class="Home-container">
-    <div class="Main-Menu">
-        <div class="button-list">
-            <h1 *ngIf="isTrue">Welcome to Cookie Clicker</h1>
-            <button (click)="newGame()">New Game</button>
-            <button (click)="loadGame()">Load Game</button>
-            <button (click)="loadOptions()">Options</button>
-            <button (click)="loadCredits()">Credits</button> 
-        </div>
+  <div class="Main-Menu">
+    <div [ngSwitch]="store.currentSubmenu | async" class="menu-tile">
+      <div *ngSwitchCase="'title'" class="button-list">
+        <h1>Welcome to Cookie Clicker</h1>
+        <button *ngFor="let action of actions" (click)="action.action()">
+          {{ action.text }}
+        </button>
+      </div>
+      <app-credits *ngSwitchCase="'credits'"></app-credits>
     </div>
+  </div>
 </div>
