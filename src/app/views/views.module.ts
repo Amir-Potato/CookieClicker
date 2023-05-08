@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { GameComponent } from './game/game.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -13,7 +14,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NotFoundComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsModule
   ]
 })
 export class ViewsModule { }

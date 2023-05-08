@@ -1,64 +1,51 @@
 import { Component, OnDestroy, inject } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { WindowService } from 'src/app/engine/window.service';
-import { app-credits } from src/app/credits/credits.component;
-
+import { Subscription, startWith } from 'rxjs';
+import { WindowService } from '../../engine/services/window.service';
+import { StoreService } from '../../engine/services/store.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnDestroy {
-
   windowService = inject(WindowService);
-  submenuActive:boolean = false;
-  subCredits:boolean = false;
-  subOptions:boolean = false;
+  store = inject(StoreService);
+  actions = [
+    { text: 'New Game', action: () => this.newGame() },
+    { text: 'Load Game', action: () => this.loadGame() },
+    { text: 'Options', action: () => this.loadOptions() },
+    { text: 'Credits', action: () => this.loadCredits() },
+  ];
 
-  
   windowSubscription: Subscription;
 
   constructor() {
     this.windowSubscription = this.windowService.window$.subscribe((window) => {
       window.document.title = 'Home';
-  });
+    });
   }
 
   newGame() {
     console.log('new game');
   }
 
-
   loadGame() {
     console.log('load game');
-
+    this.store.currentSubmenu.next('load');
   }
-
 
   loadOptions() {
     console.log('load options');
-    this.submenuActive = true;
-    this.subOptions = true; 
+    this.store.currentSubmenu.next('options');
   }
-
 
   loadCredits() {
     console.log('load credits');
-    this.submenuActive = true;
-    this.subCredits = true;
+    this.store.currentSubmenu.next('credits');
   }
 
-  closeSubmenu() {
-    this.submenuActive = false;
-    this.subCredits = false;
-    this.subOptions = false;
-  }
-  
   ngOnDestroy(): void {
     this.windowSubscription.unsubscribe();
   }
-
-
-
 }

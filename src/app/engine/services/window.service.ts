@@ -1,7 +1,7 @@
 import { Injectable, Renderer2, RendererFactory2, inject } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Mouse, MouseButtons } from './types/mouse';
-import { WindowData } from './types/window';
+import { Mouse, MouseButtons } from '../types/mouse';
+import { WindowData } from '../types/window';
 
 @Injectable({
   providedIn: 'root',
