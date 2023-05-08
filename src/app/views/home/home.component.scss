@@ -20,7 +20,7 @@
   }
   button {
     background-color: var(--Tertiary);
-    border-radius: 2em;
+    border-radius: 2em 2em 2em 2em;
     padding: 0.5em;
     margin-top: 1em;
     border-color: var(--Tertiary);
@@ -32,10 +32,19 @@
     text-align: center;
     color: var(--Accent);
     margin-bottom: 1em;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      transform: scale(101%);
+      border-radius: 1em;
+      background-color: var(--Accent);
+      color: var(--Secondary);
+      transition: 0.5s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.739) 5px 5px 12px;
+    }
   }
   .menu-tile {
     background: var(--Secondary);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     position: relative;
     border-radius: 2em;
     width:850px;
@@ -50,30 +59,4 @@
     text-align: center;
     gap: 2px;
     padding: 2em;
-  }
-
-  button:hover {
-    transform: scale(1.01);
-    transition: 0.5s;
-    background-color: var(--Accent);
-    color: var(--Secondary);
-  }
-//background button to be a small back arrow in the corner
-  .back-button {
-    background-color: var(--Tertiary);
-    border-radius: 2em;
-    padding: 0.5em;
-    margin-top: 1em;
-    border-color: var(--Tertiary);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    font-family: var(--MainFont);
-    font-size: 1.5rem;
-    width: 5em;
-    padding: auto;
-    text-align: center;
-    color: var(--Accent);
-    margin-bottom: 1em;
-    position: absolute;
-    top: 0;
-    left: 0;
   }

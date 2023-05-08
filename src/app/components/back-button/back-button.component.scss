@@ -9,11 +9,13 @@ svg-icon {
   cursor: pointer;
   margin: 1rem;
   color: var(--Primary);
+  transition: 0.2s ease-in-out;
+  &:hover {
+    color: var(--Accent);
+    transition: 0.5s ease-in-out;
+  }
 }
-svg-icon:hover {
-  color: var(--Accent);
-  transition: 0.5s;
-}
+
 
 
 
