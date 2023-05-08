@@ -2,11 +2,15 @@ import { Component, OnDestroy, inject } from '@angular/core';
 import { Subscription, startWith } from 'rxjs';
 import { WindowService } from '../../engine/services/window.service';
 import { StoreService } from '../../engine/services/store.service';
+import { CreditsComponent } from '../../components/credits/credits.component';
+import { NgSwitch, NgSwitchCase, NgFor, AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    standalone: true,
+    imports: [NgSwitch, NgSwitchCase, NgFor, CreditsComponent, AsyncPipe]
 })
 export class HomeComponent implements OnDestroy {
   windowService = inject(WindowService);
