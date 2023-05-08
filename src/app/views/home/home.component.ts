@@ -4,13 +4,15 @@ import { WindowService } from '../../engine/services/window.service';
 import { StoreService } from '../../engine/services/store.service';
 import { CreditsComponent } from '../../components/credits/credits.component';
 import { NgSwitch, NgSwitchCase, NgFor, AsyncPipe } from '@angular/common';
+import { OptionsComponent } from "../../components/options/options.component";
+import { LoadComponent } from "../../components/load/load.component";
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
     standalone: true,
-    imports: [NgSwitch, NgSwitchCase, NgFor, CreditsComponent, AsyncPipe]
+    imports: [NgSwitch, NgSwitchCase, NgFor, CreditsComponent, AsyncPipe, OptionsComponent, LoadComponent]
 })
 export class HomeComponent implements OnDestroy {
   windowService = inject(WindowService);
