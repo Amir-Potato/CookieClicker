@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ViewsModule} from './views/views.module';
 import { ComponentsModule } from './components/components.module';
+import { provideSvgIcons } from '@ngneat/svg-icon';
+import { backIcon } from './svg/back';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ComponentsModule } from './components/components.module';
     ViewsModule,
     ComponentsModule
   ],
-  providers: [],
+  providers: [
+    provideSvgIcons([backIcon])
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
