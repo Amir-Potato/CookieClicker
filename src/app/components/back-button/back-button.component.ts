@@ -1,6 +1,6 @@
 import { Component, Input, inject } from '@angular/core';
 import { StoreService } from '../../engine/services/store.service';
-import type { menuItems } from '../../engine/types/menuItems';
+import type { menuItems } from 'src/app/engine/types/menuItems';
 
 @Component({
   selector: 'app-back-button',
