@@ -9,5 +9,5 @@ import { BackButtonComponent } from '../back-button/back-button.component';
     imports: [BackButtonComponent]
 })
 export class CreditsComponent {
-
+  
 }

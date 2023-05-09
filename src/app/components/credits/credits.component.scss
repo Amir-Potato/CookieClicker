@@ -1,0 +1,55 @@
+h1 {
+  color: var(--Accent);
+  font-family: var(--TitleFont);
+  font-size: 300%;
+  padding: 10px 10px 10px 10px;
+}
+
+h2 {
+  color: var(--Accent);
+  font-family: var(--TitleFont);
+  font-size: 200%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+p {
+  color: var(--Accent);
+  background-color: var(--Primary);
+  font-family: var(--MainFont);
+  font-size: 100%;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  transition: 0.2s;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 2em;
+  width: 50%;
+  &:hover {
+    color: var(--Secondary);
+    background-color: var(--Accent);
+    transition: 0.2s;
+  }
+
+}
+.credits-pill {
+  background-color: var(--Primary);
+  border-radius: 2em;
+  width: 90%;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  align-items: center;
+}
+.credits-pill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.credit-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
