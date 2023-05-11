@@ -36,10 +36,11 @@ p {
   background-color: var(--Primary);
   border-radius: 2em;
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
   padding: 5px;
   text-align: center;
   align-items: center;
+  min-height: auto;
 }
 .credits-pill-container {
   display: flex;
@@ -52,4 +53,5 @@ p {
   text-decoration: none;
   color: inherit;
   display: block;
+  margin: 5px;
 }
