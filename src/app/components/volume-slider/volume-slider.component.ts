@@ -18,5 +18,6 @@ export class VolumeSliderComponent {
     const newValue = parseFloat(target.value);
     this.value = newValue;
     this.valueChange.emit(newValue);
+    
   }
 }
