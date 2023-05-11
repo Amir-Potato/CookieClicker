@@ -5,6 +5,11 @@
   gap: 15px;
   align-items: center;
   padding: 15px;
+  background-color: var(--Secondary);
+  filter: brightness(75%);
+  margin: 10px auto;
+  width:90%;
+  border-radius: 2em;
 }
 input[type="range"] {
   margin-top: 10px;
@@ -29,6 +34,12 @@ input[type="range"] {
     border-radius: 50%;
     background: var(--Accent);
     cursor: pointer;
+    transition: ease-in-out 0.2s;
+
+    &:hover {
+      scale: 120%;
+      transition: ease-in-out 0.2s;
+    }
   }
 
   &::-moz-range-thumb {
@@ -38,7 +49,8 @@ input[type="range"] {
     cursor: pointer;
   }
 }
-.volume-value, label {
+.volume-value,
+label {
   color: var(--Accent);
   font-family: var(--TitleFont);
   font-size: 200%;
