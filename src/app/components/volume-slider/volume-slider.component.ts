@@ -3,7 +3,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-volume-slider',
   templateUrl: './volume-slider.component.html',
-  styleUrls: ['./volume-slider.component.scss']
+  styleUrls: ['./volume-slider.component.scss'],
+  standalone: true
 })
 export class VolumeSliderComponent {
   @Input() label: string = 'Volume';

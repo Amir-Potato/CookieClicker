@@ -1,1 +1,14 @@
 <app-back-button></app-back-button>
+<h2>Options</h2>
+  <div class="volume-controls">
+    <app-volume-slider
+      label="Music"
+      [value]="musicVolume"
+      (valueChange)="onMusicVolumeChange($event)"
+    ></app-volume-slider>
+    <app-volume-slider
+      label="SFX"
+      [value]="sfxVolume"
+      (valueChange)="onSfxVolumeChange($event)"
+    ></app-volume-slider>
+  </div>

@@ -1,12 +1,13 @@
 <div class="volume-slider">
-    <label>{{label}} Volume</label>
-    <input
-      type="range"
-      min="0"
-      max="1"
-      step="0.01"
-      [value]="value"
-      (input)="onSliderChange($event)"
-    />
-  </div>
-  
+  <label>{{ label }} Volume</label>
+  <input
+    class="slider"
+    type="range"
+    min="0"
+    max="1"
+    step="0.01"
+    [value]="value"
+    (input)="onSliderChange($event)"
+  />
+  <span class="volume-value">{{ (value * 100).toFixed(0) }}%</span>
+</div>
