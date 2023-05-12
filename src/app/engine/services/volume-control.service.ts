@@ -5,15 +5,12 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class VolumeControlService {
-  private musicVolumeSource = new BehaviorSubject<number>(
+  public musicVolumeSource = new BehaviorSubject<number>(
     this.getStoredVolume('musicVolume', 1)
   );
-  private sfxVolumeSource = new BehaviorSubject<number>(
+  public sfxVolumeSource = new BehaviorSubject<number>(
     this.getStoredVolume('sfxVolume', 1)
   );
-
-  musicVolume$ = this.musicVolumeSource.asObservable();
-  sfxVolume$ = this.sfxVolumeSource.asObservable();
 
   constructor() {}
 

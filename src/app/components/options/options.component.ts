@@ -17,11 +17,11 @@ export class OptionsComponent {
   constructor(private volumeControlService: VolumeControlService) {}
 
   ngOnInit(): void {
-    this.volumeControlService.musicVolume$.subscribe(volume => {
+    this.volumeControlService.musicVolumeSource.subscribe(volume => {
       this.musicVolume = volume;
     });
 
-    this.volumeControlService.sfxVolume$.subscribe(volume => {
+    this.volumeControlService.sfxVolumeSource.subscribe(volume => {
       this.sfxVolume = volume;
     });
   }
